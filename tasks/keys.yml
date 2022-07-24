@@ -1,0 +1,7 @@
+---
+- name: Manage authorized keys for {{ username }}
+  ansible.posix.authorized_key:
+    user: "{{ username }}"
+    key: "{{ item.key }}"
+    state: "{{ item.state | default('present') }}"
+  loop: "{{ keys }}"

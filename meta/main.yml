@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: Andrea Brandi
+  description: Manage system users and groups
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: ArchLinux
+      versions:
+        - all
+
+  galaxy_tags:
+    - system
+    - users
+    - groups
+
+dependencies: []

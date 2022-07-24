@@ -1,0 +1,6 @@
+---
+# Define users using `ansible.builtin.user` module
+system_users: []
+
+# Define groups using `ansible.builtin.group` module
+system_groups: []
