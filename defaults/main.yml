@@ -1,6 +1,10 @@
 ---
 # Define users using `ansible.builtin.user` module
-system_users: []
+# Used in combination with `ansible.posix.authorized_key` module
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
+# https://docs.ansible.com/ansible/latest/collections/ansible/posix/authorized_key_module.html
+catena_users: []
 
 # Define groups using `ansible.builtin.group` module
-system_groups: []
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/group_module.html
+catena_groups: []

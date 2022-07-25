@@ -4,16 +4,15 @@ Manage system [users and groups](https://wiki.archlinux.org/title/users_and_grou
 
 ## Role variables
 
-### `system_users`
+See [`defaults/main.yml`](defaults/main.yml) for details.
+
+### `catena_users`
 
 It uses [ansible.builtin.user](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html) and [ansible.posix.authorized_key](https://docs.ansible.com/ansible/latest/collections/ansible/posix/authorized_key_module.html) modules in combination.
 
 ```yaml
-# Default
-system_users: []
-
 # Example
-system_users:
+catena_users:
   - username: satoshi
     password: "{{ password }}"
     # Description (aka Gecos) of user account
@@ -31,16 +30,13 @@ system_users:
     state: present
 ```
 
-### `system_groups`
+### `catena_groups`
 
 It uses [ansible.builtin.group](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/group_module.html) module.
 
 ```yaml
-# Default
-system_groups: []
-
 # Example
-system_groups:
+catena_groups:
   - name: backup
     state: absent
   - name: bitcoin
